@@ -1,0 +1,216 @@
+html,
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Lato",sans-serif;
+    color: #666;
+    height: 100%;
+}
+/* Başlık Bölümü*/
+.asc{
+    position: relative;
+    height: 650px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffcbdb;
+}
+
+/* Başlık Fotoğrafı*/
+#bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    opacity: 0.5;
+}
+/*Başlık Yazısı*/
+#text{
+    position: relative;
+    color: #fff;
+    font-size: 90px;
+    background-color: #111;
+    opacity: 0.8;
+    padding: 0 20px;
+    border-top-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    outline: 4px inset purple;
+    outline-offset: 10px;
+}
+
+/* Copyright Bölümü*/
+.copy{
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 8px;
+    padding: 15px;
+}
+
+.animate{
+    color: #f50404;
+    animation: fade 7s infinite;
+}
+
+@keyframes fade{
+    0%{
+        color: #fc0404;
+    }
+    50%{
+        color: blue;
+    }
+    100%{
+        color: #700b6b;
+    }
+}
+
+/* Arkaplan X*/
+
+.background--image{
+    background-image: url(./img/arkaplan.jpg);
+    min-height: 100%;
+}
+
+.background--image2{
+    background-image: url(./img/arkaplan2.jpg);
+    height: 100%;    /*Kapladığı alan en-boy olarak*/
+}
+
+.background--image3{
+    background-image: url(./img/arkaplan3.jpg);
+    height: 80%;
+}
+
+.background--image4{
+    background-image: url(./img/arkaplan4.jpg);
+    height: 80%;
+}
+.background--image5{
+    background-image: url(./img/arkaplan5.jpg);
+    height: 100%;
+}
+
+/* Arkaplan Fotoğ. Animasyonu*/
+.background--image,
+.background--image2,
+.background--image3,
+.background--image4,
+.background--image5{
+    background-position: center;     /*Pozisyonu*/
+    background-size: cover;          /*Üzerini örtüyor*/
+    background-repeat: no-repeat;    /*Tekrarlama yapmasını engelliyor.*/
+    background-attachment: fixed;    /*Arkadaki sabit üstteki üzerine geliyor.*/
+    position: relative;              /*Kaydırılma durumuna göre göreceli hale getiriyor.*/
+    opacity: 0.7;                    
+}
+
+
+/* Başlık Gövdesi*/
+.container{
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    position:absolute;
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+/*Konteyner Başlık Kutusu*/
+.container-title{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 32px; 
+    border-bottom-right-radius: 32px;
+    outline: 4px inset purple; /*Dış kaplama ayarı*/
+    outline-offset: 10px; /*Anahat boşluğu*/
+}
+
+
+/*Konteyner Başlık Yazısı ve Düzeni*/
+.container-text{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-transform: capitalize;
+    border-top-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    outline: 4px inset purple;
+    outline-offset: 10px;
+}
+
+/* Bölümler*/
+.section{
+    text-align: center;
+    padding: 48px 80px;
+}
+/* Açık Renkli Bölümler*/
+.section-light{
+    background-color: #f1f1f1;
+    color: #282e34;
+    line-height: 29px;
+}
+/* Koyu Renkli Bölümler*/
+.section-dark{
+    background-color: #282e34;
+    color: #fff;
+    line-height: 29px;
+}
+
+/* Çözünürlük Uyum*/
+
+@media(max-width:768px){
+    #text{
+        font-size: 40px;
+    }
+    .copy{
+        font-size: 10px;
+    }
+    
+    .container{
+        font-size: 20px;
+    }
+
+    .container-title{
+        padding: 11px;
+        border-top-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        outline: 4px inset purple;
+        outline-offset: 8px;
+        font-size: 24px;
+    }
+
+    .container-text{
+        padding: 11px;
+        border-radius: 11px 0px 11px 0px;
+        outline-offset: 3px;
+    }
+
+    .section{
+        text-align: center;
+        padding: 24px 32px;
+    }
+    .section-light, section{
+        font-size: 14px;
+    }
+    i{
+        font-size: 24px;
+    }
+}
+
+/* İcon*/
+i{
+    color: black;  
+}
+i:hover{
+    
+    color: red;
+}
+
